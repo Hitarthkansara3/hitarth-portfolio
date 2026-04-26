@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: rgba(255, 255, 255, 0.7);
+  --border: rgba(15, 23, 42, 0.1);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --surface: rgba(10, 15, 28, 0.55);
+  --border: rgba(148, 163, 184, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-base-50 font-sans text-base-900 antialiased transition-colors duration-500 dark:bg-base-950 dark:text-base-100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+
+.section-pad {
+  @apply px-4 py-20 sm:px-8 lg:px-12;
+}
+
+.section-title {
+  @apply font-display text-3xl font-bold tracking-tight text-base-900 dark:text-base-100 sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300 sm:text-base;
+}
+
+.blob {
+  position: fixed;
+  z-index: -10;
+  filter: blur(60px);
+  opacity: 0.4;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.blob-one {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(90deg, #38bdf8, #34d399);
+  top: 8%;
+  left: -4%;
+  animation: floatBlob 12s ease-in-out infinite;
+}
+
+.blob-two {
+  width: 340px;
+  height: 340px;
+  background: linear-gradient(90deg, #818cf8, #0ea5e9);
+  right: -6%;
+  bottom: 10%;
+  animation: floatBlob 14s ease-in-out infinite reverse;
+}
+
+@keyframes floatBlob {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(12px);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0ea5e9, #14b8a6);
+  border-radius: 999px;
+}
