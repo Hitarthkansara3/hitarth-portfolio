@@ -25,8 +25,8 @@ function Counter({ value }) {
 
 function GithubSection({ data }) {
   const cards = [
-    { label: "Contributions", value: 1287, icon: GitBranch },
-    { label: "Repositories", value: 52, icon: Github },
+    { label: "Contributions", value: 120, icon: GitBranch },
+    { label: "Repositories", value: 25, icon: Github },
     { label: "Top Languages", value: 8, icon: Code2 },
     { label: "Activity Score", value: 94, icon: BarChart3 },
   ];

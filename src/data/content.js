@@ -115,6 +115,20 @@ export const portfolioData = {
     },
     {
       category: "Analysis",
+      title: "Customer Churn Detection",
+      tech: ["Python", "Pandas", "ML", "Visualization"],
+      github: "https://github.com/Hitarthkansara3/Customer_Churn_Prediction",
+      //demo: "https://example.com",
+    },
+    {
+      category: "Analysis",
+      title: "Email Spam Detection",
+      tech: ["Python", "Pandas", "ML", "Visualization"],
+      github: "https://github.com/Hitarthkansara3/Email_Spam_Detection",
+      //demo: "https://example.com",
+    },
+    {
+      category: "Analysis",
       title: "Netflix Data Analysis",
       description:
         "Analyzed content trends, ratings, genres, and platform insights using EDA and visualizations.",
